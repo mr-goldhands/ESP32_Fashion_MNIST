@@ -1,0 +1,65 @@
+Here is a log of system loading on run ESP32 "Hello world" sample.
+
+
+I (29) boot: ESP-IDF v4.1-dev-2037-gc1ab87b 2nd stage bootloader
+I (29) boot: compile time 00:11:14
+I (29) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (49) boot.esp32: SPI Speed      : 40MHz
+I (49) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 16MB
+I (54) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (63) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (85) boot:  2 factory          factory app      00 00 00010000 00100000
+I (93) boot: End of partition table
+I (97) boot_comm: chip revision: 1, min. application chip revision: 0
+I (104) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x09ef0 ( 40688) map
+I (128) esp_image: segment 1: paddr=0x00019f18 vaddr=0x3ffb0000 size=0x0217c (  8572) load
+I (132) esp_image: segment 2: paddr=0x0001c09c vaddr=0x40080000 size=0x00404 (  1028) load
+0x40080000: _WindowOverflow4 at ~/esp/idf/esp-idf/components/freertos/xtensa_vectors.S:1778
+
+I (135) esp_image: segment 3: paddr=0x0001c4a8 vaddr=0x40080404 size=0x03b70 ( 15216) load
+I (150) esp_image: segment 4: paddr=0x00020020 vaddr=0x400d0020 size=0x17f84 ( 98180) map
+0x400d0020: _stext at ??:?
+
+I (188) esp_image: segment 5: paddr=0x00037fac vaddr=0x40083f74 size=0x09e74 ( 40564) load
+0x40083f74: heap_caps_malloc_default at ~/esp/idf/esp-idf/components/heap/heap_caps.c:144
+
+I (214) boot: Loaded app from partition at offset 0x10000
+I (214) boot: Disabling RNG early entropy source...
+I (215) psram: This chip is ESP32-D0WD
+I (220) spiram: Found 64MBit SPI RAM device
+I (224) spiram: SPI RAM mode: flash 40m sram 40m
+I (229) spiram: PSRAM initialized, cache is in low/high (2-core) mode.
+I (236) cpu_start: Pro cpu up.
+I (240) cpu_start: Application information:
+I (245) cpu_start: Project name:     hello-world
+I (250) cpu_start: App version:      1
+I (254) cpu_start: Compile time:     Feb 14 2020 00:11:32
+I (261) cpu_start: ELF file SHA256:  1a015f27707ad837...
+I (267) cpu_start: ESP-IDF:          v4.1-dev-2037-gc1ab87b
+I (273) cpu_start: Starting app cpu, entry point is 0x400811ec
+0x400811ec: call_start_cpu1 at ~/esp/idf/esp-idf/components/esp32/cpu_start.c:275
+
+I (0) cpu_start: App cpu up.
+I (1165) spiram: SPI SRAM memory test OK
+I (1165) heap_init: Initializing. RAM available for dynamic allocation:
+I (1166) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (1172) heap_init: At 3FFB2A20 len 0002D5E0 (181 KiB): DRAM
+I (1178) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (1184) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (1191) heap_init: At 4008DDE8 len 00012218 (72 KiB): IRAM
+I (1197) cpu_start: Pro cpu start user code
+I (1202) spiram: Adding pool of 4096K of external SPI memory to heap allocator
+I (1223) spi_flash: detected chip: generic
+I (1224) spi_flash: flash io: dio
+I (1233) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (1234) spiram: Reserving pool of 32K of internal memory for DMA/internal allocations
+
+Hello world!
+This is esp32 chip with 2 CPU cores, WiFi/BT/BLE, silicon revision 1, 16MB external flash
+Restarting in 10 seconds...
